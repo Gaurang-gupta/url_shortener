@@ -1,0 +1,128 @@
+.navbar, .navbar__left, .navbar__right, .navbar__leftContainer{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: #9c9ca1;
+    flex-direction: row;
+    width: 100%;
+}
+
+.navbar{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.navbar__right{
+    justify-content: end;
+}
+
+.navbar__leftLogo{
+    margin-right: 60px;
+}
+
+.navbar__leftOption{
+    margin-right: 30px;
+}
+
+.navbar__leftOption:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.navbar__login:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.navbar__rightOption{
+    margin-left: 40px;
+    padding: 10px 20px;
+    background-color: #2ccfd2;
+    border-radius: 20px;
+    color: white;
+}
+
+.navbar__rightOption:hover{
+    background-color: #99e5e2;
+    cursor: pointer;
+}
+
+.navbar__burg, .navbar__line{
+    display: none;
+}
+
+.helper{
+    display: none;
+    background-color: white;
+}
+
+@media(max-width: 376px){
+    .navbar__left, .navbar__right{
+        display: none;
+    }
+
+    .navbar{
+        margin: auto;
+        margin-top: 30px;
+        width: 90%;
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .navbar__imageContainer {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .navbar__burg {
+        display: block;
+        padding-top: 5px;
+    }
+
+    .navbar__leftContainer{
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #3a3053;
+        text-align: center;
+        padding: 30px 0px;
+        border-radius: 10px;
+        margin-top: 20px;
+        -webkit-box-shadow: 84px -25px 5px -27px rgba(240, 240, 247, 1);
+            -moz-box-shadow: 84px -25px 5px -27px rgba(240, 240, 247, 1);
+            box-shadow: 84px -25px 5px -27px rgba(240, 240, 247, 1);
+    }
+
+    .navbar__leftMobile{
+        display: block;
+    }
+
+    .navbar__rightMobile{
+        display: block;
+    }
+
+    .navbar__rightOption{
+        margin: 0px 25px;
+        color: white;
+    }
+
+    .navbar__line{
+        border: 1px solid #4d4267;
+        width: 90%;
+        display: block;
+    }
+
+    .navbar__leftOption{
+        margin: 0;
+        padding: 20px 0px;
+        color: white;
+    }
+
+    .navbar__login{
+        margin: 0;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        color: white;
+    }
+}

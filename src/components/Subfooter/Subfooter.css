@@ -1,0 +1,53 @@
+.subfooter{
+    background-color: #3a3053;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../../public/bg-boost-desktop.svg");
+    background-repeat: no-repeat;
+    background-position-x: -7rem;
+    background-position-y: -2rem;
+}
+
+.subfooter__heading{
+    font-size: 30px;
+    font-weight: 700;
+    color: #f9f5fb;
+}
+
+.subfooter__button{
+    background-color: #2ccfd2;
+        color: white;
+        outline: none;
+        border: none;
+        width: 150px;
+        font-size: 18px;
+        padding-top: 12.5px;
+        padding-bottom: 12.5px;
+        border-radius: 40px;
+        font-weight: 700;
+        margin-top: 20px;
+}
+
+.subfooter__button:hover{
+    background-color: #99e5e2;
+    cursor: pointer;
+}
+
+@media(max-width: 376px){
+    .subfooter {
+        background: url("../../../public/bg-boost-mobile.svg");
+        background-repeat: no-repeat;
+        background-color: #3a3053;
+        height: 300px;
+        background-size: cover;
+        background-position-x: -1rem;
+    }
+
+    .subfooter__heading {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+}

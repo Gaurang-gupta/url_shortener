@@ -1,0 +1,105 @@
+.url__shortened {
+    margin: auto;
+    padding: 20px 0px;
+    background-color: #f0f1f6;
+    height: fit-content;
+}
+
+.url__shortenedItem {
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background: linear-gradient(white 34%, #f0f1f6 2%, white 36%) no-repeat;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.url__short {
+    color: #64c1bf;
+    flex: 0.5;
+}
+
+.url__shortOriginal {
+    flex: 0.7;
+}
+
+.url__shortRight {
+    flex: 0.3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.url__shortButton {
+    flex: 0.5;
+    padding: 10px 30px;
+}
+
+.url__copyButton{
+    display: flex;
+    border-radius: 10px;
+    background-color: hsl(180, 66%, 49%);
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    height: 30px;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.url__copyButton:hover{
+    background-color: #9be3e2;
+}
+
+.url__buttonCopy{
+    background-color: #3a3152;
+    color: #fdf9fc;
+}
+
+.url__buttonCopy:hover{
+    background-color: #3a3152;
+    color: #fdf9fc;
+}
+
+@media(max-width: 376px){
+    .url__shortened{
+        width: 100%;
+        align-items: baseline;
+    }
+
+    .url__shortOriginal{
+        margin-left: 18px;
+    }
+
+    .url__shortenedItem{
+        width: 90%;
+        margin: auto;
+        padding: 0;
+        margin-top: 20px;
+        padding: 20px 0px;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .url__shortRight{
+        flex-direction: column;
+        margin-top: 40px;
+        width: 100%;
+        align-items: baseline;
+    }
+
+    .url__short{
+        margin-bottom: 20px;
+    }
+    
+    .url__copyButton{
+        width: 70%;
+        margin-left: 0;
+    }
+}

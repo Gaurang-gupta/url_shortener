@@ -1,0 +1,134 @@
+.statistics{
+    width: 100%;
+    background-color: #f0f1f6;
+    padding-top: 158px;
+    padding-bottom: 100px;
+    z-index: -2;
+}
+
+.statistics__heading{
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.statistics__para{
+    color: #c7c6ce;
+    font-size: 15px;
+    margin: auto;
+    text-align: center;
+    padding-top: 25px;
+    line-height: 25px;
+    padding-bottom: 50px;
+    width: 450px;
+}
+
+.statistics__grid{
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 30px;
+    background: linear-gradient(to bottom, #f0f1f6 calc(50% - 4px), #28d2d1 calc(50% - 4px) calc(50% + 4px), #f0f1f6 calc(50% + 1px));
+    
+}
+
+.statistics__gridImage{
+    background-color: #3b3054;
+    border-radius: 50%;
+}
+
+.statistics__gridContent{
+    background: linear-gradient(white 90%, #f0f1f6 10%) no-repeat;
+}
+
+.statistics__imageContainer{
+    background: linear-gradient(#f0f1f6 50%, white 50%) no-repeat;
+}
+
+.statistics__gridImage{
+    padding: 15px;
+}
+
+.statistics__gridPara{
+    color: #a8a7ac;
+    font-size: 16px;
+    padding-top: 20px;
+    line-height: 1.8;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 60px;
+}
+
+.statistics__gridHeading{
+    font-size: 25px;
+    font-weight: 700;
+    width: 80%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+.statistics__image{
+    width: 80%;
+    margin: auto;
+}
+
+.first{
+    margin-top: 32px;
+}
+
+.second{
+    margin-top: 64px;
+}
+
+@media(max-width: 1200px){
+    .statistics__line{
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media(max-width: 376px){
+    .statistics{
+        padding-bottom: 70px;
+    }
+    
+    .statistics__grid{
+        grid-template-columns: auto;
+        row-gap: 40px;
+        background: linear-gradient(to left, #f0f1f6 calc(50% - 4px), #28d2d1 calc(50% - 4px) calc(50% + 4px), #f0f1f6 calc(50% + 1px));
+    }
+
+    .statistics__para {
+        width: 90%;
+        margin: auto;
+    }
+
+    .statistics__gridElement{
+        width: 90%;
+        margin: auto;
+    }
+
+    .statistics__gridPara{
+        font-size: 14px;
+        text-align: center;
+        padding-bottom: 30px;
+        width: 77%;
+    }
+    
+    .statistics__image{
+        text-align: center;
+    }
+
+    .statistics__line{
+        display: none;
+    }
+
+    .statistics__gridContent{
+        background: white;
+    }
+
+    .statistics__gridHeading{
+        text-align: center;
+    }
+}
