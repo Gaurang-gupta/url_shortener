@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import "./Display.css"
 
 function Display({ data }) {
@@ -8,8 +8,14 @@ function Display({ data }) {
         { originalLink: 'https://stackoverflow.com/', shortLink: 'https://shrtco.de/qMfHN', copied: false }
     ]
     const [isClicked, setIsClicked] = useState(() => data.map(
-        subarr => ({ copied: false })
+        subarr => ({ copied: false }, subarr)
     ));
+    useEffect(() => {
+        setIsClicked(() => data.map(
+            subarr => ({ copied: false }, subarr)
+        ))
+    }, [data])
+    console.log(isClicked)
     const handleClick = (dat, i) => {
         navigator.clipboard.writeText(dat.shortLink)
         setIsClicked(isClicked.map((e, j) => j !== i ? e : ({
@@ -20,7 +26,6 @@ function Display({ data }) {
     return (
         <div className="url__shortened">
             {data.map((dat, index) => (
-                index > 0 &&
                 <div className="url__shortenedItem" key={index}>
                     <p className="url__shortOriginal">{dat?.originalLink}</p>
                     <div className="url__shortRight">

@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "./Url.css"
 function Url({ sendData }) {
-    const [data, setData] = useState([0]);
+    const [data, setData] = useState([{}]);
     const [link, setLink] = useState("");
     const linkHandle = (text) => {
         console.log('text', text)
@@ -14,23 +14,11 @@ function Url({ sendData }) {
         const short = await fetch(`https://api.shrtco.de/v2/shorten?url=${link}`)
         const json = await short.json();
         console.log(json)
-
-        if (data.length === 0) {
-            setData(() => {
-                return [{
-                    originalLink: json.result.original_link,
-                    shortLink: json.result.full_short_link,
-                }]
-            })
-        } else {
-            setData(() => {
-                return [...data, {
-                    originalLink: json.result.original_link,
-                    shortLink: json.result.full_short_link,
-                }]
-            })
-        }
-        sendData([...data]);
+        sendData({
+            originalLink: json.result.original_link,
+            shortLink: json.result.full_short_link,
+        });
+        setLink("");
     }
     return (
         <div className="url__container">
