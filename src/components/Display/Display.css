@@ -12,7 +12,7 @@
     align-items: center;
     padding: 15px 30px;
     border-radius: 10px;
-    background: linear-gradient(white 34%, #f0f1f6 2%, white 36%) no-repeat;
+    background-color: white;
     justify-content: space-between;
     margin-bottom: 20px;
 }
@@ -75,6 +75,8 @@
 
     .url__shortOriginal{
         margin-left: 18px;
+        border-bottom: 1px solid #f0f1f6;
+        padding-bottom: 20px;
     }
 
     .url__shortenedItem{
@@ -89,8 +91,8 @@
 
     .url__shortRight{
         flex-direction: column;
-        margin-top: 40px;
-        width: 100%;
+        margin-top: 20px;
+        width: 99%;
         align-items: baseline;
     }
 
@@ -102,4 +104,9 @@
         width: 70%;
         margin-left: 0;
     }
+
+        .url__shortOriginal {
+            width: 80%;
+            word-wrap: break-word;
+        }
 }
